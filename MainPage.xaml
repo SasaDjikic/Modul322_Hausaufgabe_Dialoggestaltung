@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_001___myFirstMauiAPP.MainPage" BackgroundColor="White">
+    <Grid RowDefinitions="200,100,265,*">
+        <Grid Grid.Row="0"
+              RowDefinitions="50,50,50"
+              ColumnDefinitions="*,2*"
+              Margin="20, 20, 20, 0">
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   Text="Kunden-Nr.:"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   TextColor="Black" />
+            <Label Grid.Row="1"
+                   Grid.Column="0"
+                   Text="Name:"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   TextColor="Black" />
+            <Label Grid.Row="2"
+                   Grid.Column="0"
+                   Text="Vorname:"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   TextColor="Black" />
+            <Border Stroke="Black"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Background="White"
+                    StrokeThickness="2"
+                    HorizontalOptions="Fill">
+                <Entry VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Placeholder="..."
+                       PlaceholderColor="Black"
+                       TextColor="Black" />
+            </Border>
+            <Border Stroke="Black"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Background="White"
+                    StrokeThickness="2"
+                    HorizontalOptions="Fill">
+                <Entry VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Placeholder="..."
+                       PlaceholderColor="Black"
+                       TextColor="Black"/>
+            </Border>
+            <Border Stroke="Black"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Background="White"
+                    StrokeThickness="2"
+                    HorizontalOptions="Fill">
+                <Entry VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Placeholder="..."
+                       PlaceholderColor="Black"
+                       TextColor="Black"/>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="1"
+              RowDefinitions="40"
+              ColumnDefinitions="*,2*"
+              Margin="20, 0, 20, 0">
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   Text="Altersgruppe auswählen:"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   TextColor="Black" />
+            <StackLayout Orientation="Vertical"
+                         Grid.Row="0"
+                         Grid.Column="1">
+                <RadioButton Content="16-21"
+                             TextColor="Black"
+                             BorderColor="Green"
+                             IsChecked="True">
+                </RadioButton>
+                <RadioButton Content="22-35"
+                             TextColor="Black"></RadioButton>
+                <RadioButton Content="36-46"
+                             TextColor="Black"></RadioButton>
+            </StackLayout>
+        </Grid>
+        <Border Grid.Row="2"
+                Background="White"
+                StrokeThickness="2">
+            <Grid RowDefinitions="50,50,50,50"
+                  ColumnDefinitions="*,2*"
+                  Margin="20, 20, 20, 20">
+                <Label Grid.Row="0"
+                       Grid.Column="0"
+                       Text="Adress-Typ auswählen"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Start"
+                       TextColor="Black" />
+                <Label Grid.Row="1"
+                       Grid.Column="0"
+                       Text="Strasse:"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Start"
+                       TextColor="Black" />
+                <Label Grid.Row="2"
+                       Grid.Column="0"
+                       Text="PLZ:"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Start"
+                       TextColor="Black" />
+                <Label Grid.Row="3"
+                       Grid.Column="0"
+                       Text="Ort:"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Start"
+                       TextColor="Black" />
+                <Picker Title="auswählen"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        TextColor="Black"
+                        HorizontalTextAlignment="Center"
+                        FontAttributes="Bold">
+                    <Picker.Items>
+                        <x:String>Heimanschrift</x:String>
+                        <x:String>Rechnunganschrift</x:String>
+                        <x:String>Postanschrift</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Border Stroke="Black"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Background="White"
+                        StrokeThickness="2"
+                        HorizontalOptions="Fill">
+                    <Entry VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center"
+                           Placeholder="..."
+                           PlaceholderColor="Black"
+                           TextColor="Black"
+                           Margin="0, 10, 0, 10" />
+                </Border>
+                <Border Stroke="Black"
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Background="White"
+                        StrokeThickness="2"
+                        HorizontalOptions="Fill">
+                    <Entry VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center"
+                           Placeholder="..."
+                           PlaceholderColor="Black"
+                           TextColor="Black"
+                           Margin="0, 10, 0, 10" />
+                </Border>
+                <Border Stroke="Black"
+                        Grid.Row="3"
+                        Grid.Column="2"
+                        Background="White"
+                        StrokeThickness="2"
+                        HorizontalOptions="Fill">
+                    <Entry VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center"
+                           Placeholder="..."
+                           PlaceholderColor="Black"
+                           TextColor="Black"
+                           Margin="0, 10, 0, 10" />
+                </Border>
+            </Grid>
+        </Border>
+        <HorizontalStackLayout Grid.Row="3" HorizontalOptions="Center">
+            <Button x:Name="note1"
+                    Text="Speichern"
+                    BorderWidth="2"
+                    Margin="20, 60, 20, 60"
+                    Clicked="OnButtonClickedNote1" />
+            <Button x:Name="note2"
+                    Text="Übernehmen"
+                    BorderWidth="2"
+                    IsEnabled="True"
+                    Margin="0, 60, 0, 60"
+                    Clicked="OnButtonClickedNote2" />
+
+            <Button x:Name="note3"
+                    Text="Abbrechen"
+                    BorderWidth="2"
+                    Margin="20, 60, 20, 60"
+                    Clicked="OnButtonClickedNote3" />
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>
+
+
+
+
